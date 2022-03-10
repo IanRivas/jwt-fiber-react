@@ -1,5 +1,5 @@
 // Register
-
+// Para requestrar un usuario
 POST http://localhost:3000/api/register
 Content-Type: application/json
 
@@ -10,6 +10,7 @@ Content-Type: application/json
 }
 
 ###
+// para logiar un usuario
 POST http://localhost:3000/api/login
 Content-Type: application/json
 
@@ -17,3 +18,12 @@ Content-Type: application/json
     "email": "ianrivas@gmail.com",
     "password": "12345hola"
 }
+// esto devuelve una cookie con el jwt y una fecha de expiracion, si esta bien
+
+###
+// para que te de la info del user
+GET  http://localhost:3000/api/user
+//Set-Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDcwMjQxMzgsImlzcyI6IjEifQ.m-XGzmdyqHxrSWkhyb1KfOBIYrTpCHhjCZT8CtiZA2U; expires=Fri, 11 Mar 2022 18:42:18 GMT; path=/; HttpOnly; SameSite=Lax
+
+### 
+POST  http://localhost:3000/api/logout
